@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple Choice Quiz Application</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-container">
+        <div id="upload-container">
+            <h1>🎓 Multiple Choice Quiz Application</h1>
+            <p>Upload your quiz file (JSON or XML format) and start taking the quiz!</p>
+            
+            <div class="format-info">
+                <div class="format-box">
+                    <h3>JSON Format Example</h3>
+                    <pre><code>[
+    {
+        "question": "What is the capital of France?",
+        "options": ["London", "Berlin", "Paris", "Madrid"],
+        "answer": "Paris"
+    }
+]</code></pre>
+                </div>
+                <div class="format-box">
+                    <h3>XML Format Example</h3>
+                    <pre><code>&lt;quiz&gt;
+    &lt;question&gt;
+        &lt;text&gt;What is the capital of France?&lt;/text&gt;
+        &lt;options&gt;
+            &lt;option&gt;London&lt;/option&gt;
+            &lt;option&gt;Paris&lt;/option&gt;
+        &lt;/options&gt;
+        &lt;answer&gt;Paris&lt;/answer&gt;
+    &lt;/question&gt;
+&lt;/quiz&gt;</code></pre>
+                </div>
+            </div>
+
+            <div class="upload-area">
+                <label for="file-upload">📁 Upload Quiz File</label>
+                <input type="file" id="file-upload" accept=".json,.xml">
+                <button id="load-btn" class="btn btn-primary">📤 Load Quiz</button>
+                <p id="status-msg">Please upload a quiz file to get started.</p>
+            </div>
+        </div>
+
+        <div id="quiz-container">
+            </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
